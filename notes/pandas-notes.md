@@ -21,7 +21,7 @@ Check Version:  `print(pd.__version__)`
 2. DataFrame — 2D
 3. Panel — 3D
 
-![[ds-in-pandas.png]]
+![](ds-in-pandas.png)
 
 #### Series
 
@@ -31,13 +31,13 @@ Check Version:  `print(pd.__version__)`
 	- One-dimensional data (Values)
 	- Index
 
-![[series.png]]
+![](series.png)
 
 #### DataFrame
 
 - A Pandas DataFrame is a 2 dimensional data structure, like a 2 dimensional array, or a table with rows and columns.
 
-![[dframe-operations.png]]
+![](dframe-operations.png)
 
 ### Reading From CSV File
 
@@ -78,8 +78,7 @@ print(df.to_string())
 - Another way of dealing with empty cells is to insert a new value instead.
 - This way you do not have to delete entire rows just because of some empty cells.
 
-![[dropna.png]]
-![[fillna.png]]
+![](dropna.png)
 
 
 #### Fixing Data
@@ -96,7 +95,7 @@ for x in df.index:
 #### Handle Duplicates
 
 - Duplicate rows are rows that have been registered more than one time.
-![[hand-duplicate.png]]
+![](hand-duplicate.png)
 
 - To discover duplicates, we can use the `duplicated()` method.
 - The duplicated() method returns a Boolean values for each row:
