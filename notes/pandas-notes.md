@@ -1,4 +1,4 @@
-# Pandas
+# Pandas(Panal Data)
 
 - Pandas is a Python library used for working with data sets.
 - It has functions for analyzing, cleaning, exploring, and manipulating data.
@@ -105,3 +105,4 @@ for x in df.index:
 - To remove duplicates, use the drop_duplicates() method.
 
 `df.drop_duplicates(inplace = True)`
+
