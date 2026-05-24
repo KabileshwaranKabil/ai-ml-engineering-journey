@@ -51,7 +51,7 @@ Like in the above code it shows that arr is numpy.ndarray type.
 ```python 
 x = np.array([[1, 2, 3], [4, 5, 6]], np.int32)
 ```
-![[arrays.png]]
+![](arrays.png)
 
 ### Accessing Numpy Array
 
@@ -69,7 +69,7 @@ arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
 newarr = arr.reshape(4, 3)
 ```
 
-![[reshape.png]]
+![](reshape.png)
 
 ### Slicing
 
@@ -86,7 +86,7 @@ print(arr[1:5])
 ```
 **The result includes the start index, but excludes the end index.**
 
-![[slicing.png]]
+![](slicing.png)
 
 ### Search, Sort, Filter
 ```py
