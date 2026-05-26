@@ -301,9 +301,26 @@ reviews.apply(remean_points,axis='columns')
 
 ```
 
-f we had called reviews.apply() with axis='index', then instead of passing a function to transform each row, we would need to give a function to transform each column.
+If we had called reviews.apply() with axis='index', then instead of passing a function to transform each row, we would need to give a function to transform each column.
 
 Note that map() and apply() return new, transformed Series and DataFrames, respectively. They don't modify the original data they're called on. If we look at the first row of reviews, we can see that it still has its original points value.
 
+`reviews.head(1)`
+
+Pandas provides many common mapping operations as built-ins. For example, here's a faster way of remeaning our points column:
 
 
+```python
+review_points_mean = reviews.points.mean()
+reviews.points - review_points_mean
+```
+
+In this code we are performing an operation between a lot of values on the left-hand side (everything in the Series) and a single value on the right-hand side (the mean value). Pandas looks at this expression and figures out that we must mean to subtract that mean value from every value in the dataset.
+
+Pandas will also understand what to do if we perform these operations between Series of equal length. For example, an easy way of combining country and region information in the dataset would be to do the following:
+
+`reviews.country + " - " + reviews.region_1`
+
+These operators are faster than map() or apply() because they use speed ups built into pandas. All of the standard Python operators (>, <, ==, and so on) work in this manner.
+
+However, they are not as flexible as map() or apply(), which can do more advanced things, like applying conditional logic, which cannot be done with addition and subtraction alone.
